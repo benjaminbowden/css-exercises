@@ -15,14 +15,32 @@ body {
   justify-content: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.container {;
+}
+
+.text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
 }
 
 .icon {
+  flex: 1 0 auto;
   color: royalblue;
   font-size: 26px;
   font-weight: 700;
