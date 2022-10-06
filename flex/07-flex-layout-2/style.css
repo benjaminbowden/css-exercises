@@ -4,16 +4,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+ /* justify-content: space-between; */
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  flex: auto;
   height: 72px;
   background: darkmagenta;
   color: white;
+ 
+  display: flex;
+  align-items: center;
+ /* flex: 0 1 auto; */
   font-size: 32px;
   font-weight: 900;
   padding-left: 16px;
@@ -22,7 +23,7 @@ body {
 
 .container {
   display: flex;
-  flex: 3;
+  flex: 1; /* I had flex 2 */
 }
 
 .footer {
@@ -37,25 +38,39 @@ body {
 .sidebar {
   width: 300px;
   background: royalblue;
-  flex: 1 0 auto;
+  flex-shrink: 0;
+ /*I used this instead of flex-shrink above: flex: 1 0 auto; */
+  padding: 16px;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: flex-start; - this wasn't needed as flex-wrap wraps from flex-start anyway */
+  padding: 32px;
 }
 
 .card {
-  flex: 1 0 auto;
-  max-width: 200px;
-  flex-wrap: wrap;
+  width: 300px;
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  padding: 16px;
+  margin: 16px;
 }
 
- li {
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
   list-style: none;
+  margin-bottom: 16px;
+}
+
+a {
+  text-decoration: none;
   color: #eee;
   font-size: 24px;
 }
